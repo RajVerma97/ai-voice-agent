@@ -1,14 +1,18 @@
 import datetime
 import os.path
+from typing import Optional, List, Dict, Any
+from pathlib import Path
 
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
+from utils.logger import logger
+from config import event_config
 
 
-class GoogleCalendarEvent:
+class GoogleCalendarClient:
     SCOPES = ["https://www.googleapis.com/auth/calendar"]
 
     def __init__(
@@ -16,30 +20,53 @@ class GoogleCalendarEvent:
         credentials_file: str = "credentials.json",
         token_file: str = "token.json",
     ):
-        self.credentials = self.__authenticate()
+        self.credentials_file = Path(credentials_file)
+        self.token_file = Path(token_file)
+        self.credentials = self._authenticate()
         self.service = build("calendar", "v3", credentials=self.credentials)
 
-    def __authenticate(self):
-        creds = None
-        # The file token.json stores the user's access and refresh tokens, and is
-        # created automatically when the authorization flow completes for the first
-        # time.
-        if os.path.exists("token.json"):
-            creds = Credentials.from_authorized_user_file("token.json", self.SCOPES)
-        # If there are no (valid) credentials available, let the user log in.
-        if not creds or not creds.valid:
-            if creds and creds.expired and creds.refresh_token:
-                creds.refresh(Request())
-            else:
-                flow = InstalledAppFlow.from_client_secrets_file(
-                    "credentials.json", self.SCOPES
-                )
-                creds = flow.run_local_server(port=8000)
-            # Save the credentials for the next run
-            with open("token.json", "w") as token:
-                token.write(creds.to_json())
+    def _authenticate(self):
+        """
+        Authenticate with Google Calendar API.
 
-        return creds
+        Returns:
+            Credentials object for API access
+
+        Raises:
+            Exception: If authentication fails
+        """
+        logger.debug("Starting Google Calendar authentication")
+        creds = None
+
+        try:
+            # Load existing credentials if available
+            if self.token_file.exists():
+                creds = Credentials.from_authorized_user_file(
+                    str(self.token_file), self.SCOPES
+                )
+
+            # Refresh or create new credentials
+            if not creds or not creds.valid:
+                if creds and creds.expired and creds.refresh_token:
+                    logger.debug("Refreshing expired credentials")
+                    creds.refresh(Request())
+                else:
+                    logger.debug("Running OAuth flow for new authentication")
+                    flow = InstalledAppFlow.from_client_secrets_file(
+                        str(self.credentials_file), self.SCOPES
+                    )
+                    creds = flow.run_local_server(port=0)
+
+                # Save credentials for future use
+                self.token_file.write_text(creds.to_json())
+                logger.debug("Credentials saved successfully")
+
+            logger.info("Successfully authenticated with Google Calendar")
+            return creds
+
+        except Exception as e:
+            logger.exception("Failed to authenticate with Google Calendar")
+            raise
 
     def get_upcoming_event(self, max_result: int = 10):
         try:
@@ -71,15 +98,16 @@ class GoogleCalendarEvent:
         except HttpError as error:
             print(f"An error occurred: {error}")
 
-    def add_event(
+    def create_event(
         self,
-        title: str,
         start_time: datetime.datetime,
         end_time: datetime.datetime,
         color_id: int,
+        title: str,
         timezone: str = "UTC",
         description: str | None = None,
     ):
+        logger.debug("Starting create event")
         try:
             event = {
                 "summary": title,
@@ -103,26 +131,8 @@ class GoogleCalendarEvent:
             created_event = (
                 self.service.events().insert(calendarId="primary", body=event).execute()
             )
+            logger.debug("Successfully Created event")
             return created_event
 
         except HttpError as error:
             raise RuntimeError(f"Failed to create event: {error}")
-
-
-google_calendar_event = GoogleCalendarEvent()
-# google_calendar_event.get_upcoming_event()
-
-start = datetime.datetime(2025, 1, 10, 15, 20, tzinfo=datetime.timezone.utc)
-end = datetime.datetime(2025, 1, 10, 16, 4, tzinfo=datetime.timezone.utc)
-
-
-event = google_calendar_event.add_event(
-    title="AI Interview Call",
-    start_time=start,
-    end_time=end,
-    color_id=6,
-    timezone="Asia/Kolkata",
-    description="Scheduled via voice assistant",
-)
-
-print("Event created:", event["htmlLink"])
