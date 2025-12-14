@@ -112,3 +112,1181 @@
 2025-12-15 00:37:41 | DEBUG    | src.clients.google.calendar_client:create_event:81 - Successfully Created event
 2025-12-15 00:38:07 | DEBUG    | src.clients.google.calendar_client:create_event:55 - Starting create event
 2025-12-15 00:38:08 | DEBUG    | src.clients.google.calendar_client:create_event:81 - Successfully Created event
+2025-12-15 00:43:05 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 00:43:05 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 00:43:05 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 00:43:05 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 00:43:05 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 00:43:05 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 00:43:05 | DEBUG    | src.clients.google.auth:_authenticate:49 - Refreshing expired credentials
+2025-12-15 00:43:05 | ERROR    | src.clients.google.auth:_authenticate:66 - Failed to authenticate with Google Calendar
+Traceback (most recent call last):
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/urllib3/connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+           │          └ <function create_connection at 0x105c91d20>
+           └ <module 'urllib3.util.connection' from '/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-...
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               │      │           │     │     │       │      └ <SocketKind.SOCK_STREAM: 1>
+               │      │           │     │     │       └ <module 'socket' from '/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/soc...
+               │      │           │     │     └ <AddressFamily.AF_UNSPEC: 0>
+               │      │           │     └ 443
+               │      │           └ 'oauth2.googleapis.com'
+               │      └ <function getaddrinfo at 0x10420fab0>
+               └ <module 'socket' from '/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/soc...
+
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/socket.py", line 983, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               │       │           │     │     │       │     │      └ 0
+               │       │           │     │     │       │     └ 0
+               │       │           │     │     │       └ <SocketKind.SOCK_STREAM: 1>
+               │       │           │     │     └ <AddressFamily.AF_UNSPEC: 0>
+               │       │           │     └ 443
+               │       │           └ 'oauth2.googleapis.com'
+               │       └ <built-in function getaddrinfo>
+               └ <module '_socket' from '/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/li...
+
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               │    └ <function HTTPConnectionPool._make_request at 0x105d578a0>
+               └ <urllib3.connectionpool.HTTPSConnectionPool object at 0x106e35a90>
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+          └ NameResolutionError("HTTPSConnection(host='oauth2.googleapis.com', port=443): Failed to resolve 'oauth2.googleapis.com' ([Err...
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+    │    │              └ <HTTPSConnection(host='oauth2.googleapis.com', port=443) at 0x106e35e80>
+    │    └ <function HTTPSConnectionPool._validate_conn at 0x105d60300>
+    └ <urllib3.connectionpool.HTTPSConnectionPool object at 0x106e35a90>
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/urllib3/connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+    │    └ <function HTTPSConnection.connect at 0x105d4e8d0>
+    └ <HTTPSConnection(host='oauth2.googleapis.com', port=443) at 0x106e35e80>
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/urllib3/connection.py", line 759, in connect
+    self.sock = sock = self._new_conn()
+    │    │             │    └ <function HTTPConnection._new_conn at 0x105d4d2d0>
+    │    │             └ <HTTPSConnection(host='oauth2.googleapis.com', port=443) at 0x106e35e80>
+    │    └ None
+    └ <HTTPSConnection(host='oauth2.googleapis.com', port=443) at 0x106e35e80>
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/urllib3/connection.py", line 211, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+          │                   │    │     └ <HTTPSConnection(host='oauth2.googleapis.com', port=443) at 0x106e35e80>
+          │                   │    └ <property object at 0x105d48860>
+          │                   └ <HTTPSConnection(host='oauth2.googleapis.com', port=443) at 0x106e35e80>
+          └ <class 'urllib3.exceptions.NameResolutionError'>
+
+urllib3.exceptions.NameResolutionError: HTTPSConnection(host='oauth2.googleapis.com', port=443): Failed to resolve 'oauth2.googleapis.com' ([Errno 8] nodename nor servname provided, or not known)
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/requests/adapters.py", line 644, in send
+    resp = conn.urlopen(
+           │    └ <function HTTPConnectionPool.urlopen at 0x105d57cc0>
+           └ <urllib3.connectionpool.HTTPSConnectionPool object at 0x106e35a90>
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              │       └ <function Retry.increment at 0x105cad220>
+              └ Retry(total=0, connect=None, read=False, redirect=None, status=None)
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+          │             │      │    │            └ NameResolutionError("HTTPSConnection(host='oauth2.googleapis.com', port=443): Failed to resolve 'oauth2.googleapis.com' ([Err...
+          │             │      │    └ NameResolutionError("HTTPSConnection(host='oauth2.googleapis.com', port=443): Failed to resolve 'oauth2.googleapis.com' ([Err...
+          │             │      └ '/token'
+          │             └ <urllib3.connectionpool.HTTPSConnectionPool object at 0x106e35a90>
+          └ <class 'urllib3.exceptions.MaxRetryError'>
+
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='oauth2.googleapis.com', port=443): Max retries exceeded with url: /token (Caused by NameResolutionError("HTTPSConnection(host='oauth2.googleapis.com', port=443): Failed to resolve 'oauth2.googleapis.com' ([Errno 8] nodename nor servname provided, or not known)"))
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/google/auth/transport/requests.py", line 187, in __call__
+    response = self.session.request(
+               │    │       └ <function Session.request at 0x1060790c0>
+               │    └ <requests.sessions.Session object at 0x106e34ad0>
+               └ <google.auth.transport.requests.Request object at 0x106e34980>
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           │    │    │       └ {'timeout': 120, 'allow_redirects': True, 'proxies': OrderedDict(), 'stream': False, 'verify': True, 'cert': None}
+           │    │    └ <PreparedRequest [POST]>
+           │    └ <function Session.send at 0x106079640>
+           └ <requests.sessions.Session object at 0x106e34ad0>
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        │       │    │          └ {'timeout': 120, 'proxies': OrderedDict(), 'stream': False, 'verify': True, 'cert': None}
+        │       │    └ <PreparedRequest [POST]>
+        │       └ <function HTTPAdapter.send at 0x1060789e0>
+        └ <requests.adapters.HTTPAdapter object at 0x106e352b0>
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/requests/adapters.py", line 677, in send
+    raise ConnectionError(e, request=request)
+          │                          └ <PreparedRequest [POST]>
+          └ <class 'requests.exceptions.ConnectionError'>
+
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='oauth2.googleapis.com', port=443): Max retries exceeded with url: /token (Caused by NameResolutionError("HTTPSConnection(host='oauth2.googleapis.com', port=443): Failed to resolve 'oauth2.googleapis.com' ([Errno 8] nodename nor servname provided, or not known)"))
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/main.py", line 2, in <module>
+    from src.api.routes import calendar_router
+
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 762, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/src/api/routes/__init__.py", line 1, in <module>
+    from .calendar_routes import calendar_router
+
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 762, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/src/api/routes/calendar_routes.py", line 6, in <module>
+    calendar_handler = CalendarHandler()
+                       └ <class 'src.api.handlers.calendar_handler.CalendarHandler'>
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/src/api/handlers/calendar_handler.py", line 8, in __init__
+    self.calendar_service = CalendarService()
+    │                       └ <class 'src.services.calendar_service.CalendarService'>
+    └ <src.api.handlers.calendar_handler.CalendarHandler object at 0x106d4fcb0>
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/src/services/calendar_service.py", line 10, in __init__
+    self.google_calendar_client = GoogleCalendarClient()
+    │                             └ <class 'src.clients.google.calendar_client.GoogleCalendarClient'>
+    └ <src.services.calendar_service.CalendarService object at 0x106d4fe00>
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/src/clients/google/calendar_client.py", line 27, in __init__
+    authenticator = GoogleAuthenticator(
+                    └ <class 'src.clients.google.auth.GoogleAuthenticator'>
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/src/clients/google/auth.py", line 25, in __init__
+    self.credentials = self._authenticate()
+    │                  │    └ <function GoogleAuthenticator._authenticate at 0x106d1a350>
+    │                  └ <src.clients.google.auth.GoogleAuthenticator object at 0x106e341a0>
+    └ <src.clients.google.auth.GoogleAuthenticator object at 0x106e341a0>
+
+> File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/src/clients/google/auth.py", line 50, in _authenticate
+    creds.refresh(Request())
+    │     │       └ <class 'google.auth.transport.requests.Request'>
+    │     └ <function Credentials.refresh at 0x106749bc0>
+    └ <google.oauth2.credentials.Credentials object at 0x106e34590>
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/google/oauth2/credentials.py", line 409, in refresh
+    ) = reauth.refresh_grant(
+        │      └ <function refresh_grant at 0x106748b40>
+        └ <module 'google.oauth2.reauth' from '/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-pac...
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/google/oauth2/reauth.py", line 333, in refresh_grant
+    response_status_ok, response_data, retryable_error = _client._token_endpoint_request_no_throw(
+                                                         │       └ <function _token_endpoint_request_no_throw at 0x1065f47d0>
+                                                         └ <module 'google.oauth2._client' from '/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-pa...
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/google/oauth2/_client.py", line 192, in _token_endpoint_request_no_throw
+    response = request(
+               └ <google.auth.transport.requests.Request object at 0x106e34980>
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/google/auth/transport/requests.py", line 194, in __call__
+    raise new_exc from caught_exc
+          └ TransportError(ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'oauth2.googleapis.com\', port=443): Max retries exce...
+
+google.auth.exceptions.TransportError: HTTPSConnectionPool(host='oauth2.googleapis.com', port=443): Max retries exceeded with url: /token (Caused by NameResolutionError("HTTPSConnection(host='oauth2.googleapis.com', port=443): Failed to resolve 'oauth2.googleapis.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2025-12-15 00:43:13 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 00:43:13 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 00:43:13 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 00:43:13 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 00:43:13 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 00:43:13 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 00:43:13 | DEBUG    | src.clients.google.auth:_authenticate:49 - Refreshing expired credentials
+2025-12-15 00:43:13 | ERROR    | src.clients.google.auth:_authenticate:66 - Failed to authenticate with Google Calendar
+Traceback (most recent call last):
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/urllib3/connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+           │          └ <function create_connection at 0x104fc1d20>
+           └ <module 'urllib3.util.connection' from '/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-...
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               │      │           │     │     │       │      └ <SocketKind.SOCK_STREAM: 1>
+               │      │           │     │     │       └ <module 'socket' from '/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/soc...
+               │      │           │     │     └ <AddressFamily.AF_UNSPEC: 0>
+               │      │           │     └ 443
+               │      │           └ 'oauth2.googleapis.com'
+               │      └ <function getaddrinfo at 0x103c2bab0>
+               └ <module 'socket' from '/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/soc...
+
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/socket.py", line 983, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               │       │           │     │     │       │     │      └ 0
+               │       │           │     │     │       │     └ 0
+               │       │           │     │     │       └ <SocketKind.SOCK_STREAM: 1>
+               │       │           │     │     └ <AddressFamily.AF_UNSPEC: 0>
+               │       │           │     └ 443
+               │       │           └ 'oauth2.googleapis.com'
+               │       └ <built-in function getaddrinfo>
+               └ <module '_socket' from '/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/li...
+
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               │    └ <function HTTPConnectionPool._make_request at 0x10508b8a0>
+               └ <urllib3.connectionpool.HTTPSConnectionPool object at 0x105ea5a90>
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+          └ NameResolutionError("HTTPSConnection(host='oauth2.googleapis.com', port=443): Failed to resolve 'oauth2.googleapis.com' ([Err...
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+    │    │              └ <HTTPSConnection(host='oauth2.googleapis.com', port=443) at 0x105ea5e80>
+    │    └ <function HTTPSConnectionPool._validate_conn at 0x105094300>
+    └ <urllib3.connectionpool.HTTPSConnectionPool object at 0x105ea5a90>
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/urllib3/connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+    │    └ <function HTTPSConnection.connect at 0x1050828d0>
+    └ <HTTPSConnection(host='oauth2.googleapis.com', port=443) at 0x105ea5e80>
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/urllib3/connection.py", line 759, in connect
+    self.sock = sock = self._new_conn()
+    │    │             │    └ <function HTTPConnection._new_conn at 0x1050812d0>
+    │    │             └ <HTTPSConnection(host='oauth2.googleapis.com', port=443) at 0x105ea5e80>
+    │    └ None
+    └ <HTTPSConnection(host='oauth2.googleapis.com', port=443) at 0x105ea5e80>
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/urllib3/connection.py", line 211, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+          │                   │    │     └ <HTTPSConnection(host='oauth2.googleapis.com', port=443) at 0x105ea5e80>
+          │                   │    └ <property object at 0x10507c590>
+          │                   └ <HTTPSConnection(host='oauth2.googleapis.com', port=443) at 0x105ea5e80>
+          └ <class 'urllib3.exceptions.NameResolutionError'>
+
+urllib3.exceptions.NameResolutionError: HTTPSConnection(host='oauth2.googleapis.com', port=443): Failed to resolve 'oauth2.googleapis.com' ([Errno 8] nodename nor servname provided, or not known)
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/requests/adapters.py", line 644, in send
+    resp = conn.urlopen(
+           │    └ <function HTTPConnectionPool.urlopen at 0x10508bcc0>
+           └ <urllib3.connectionpool.HTTPSConnectionPool object at 0x105ea5a90>
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              │       └ <function Retry.increment at 0x104fe1220>
+              └ Retry(total=0, connect=None, read=False, redirect=None, status=None)
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+          │             │      │    │            └ NameResolutionError("HTTPSConnection(host='oauth2.googleapis.com', port=443): Failed to resolve 'oauth2.googleapis.com' ([Err...
+          │             │      │    └ NameResolutionError("HTTPSConnection(host='oauth2.googleapis.com', port=443): Failed to resolve 'oauth2.googleapis.com' ([Err...
+          │             │      └ '/token'
+          │             └ <urllib3.connectionpool.HTTPSConnectionPool object at 0x105ea5a90>
+          └ <class 'urllib3.exceptions.MaxRetryError'>
+
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='oauth2.googleapis.com', port=443): Max retries exceeded with url: /token (Caused by NameResolutionError("HTTPSConnection(host='oauth2.googleapis.com', port=443): Failed to resolve 'oauth2.googleapis.com' ([Errno 8] nodename nor servname provided, or not known)"))
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/google/auth/transport/requests.py", line 187, in __call__
+    response = self.session.request(
+               │    │       └ <function Session.request at 0x1054650c0>
+               │    └ <requests.sessions.Session object at 0x105ea4ad0>
+               └ <google.auth.transport.requests.Request object at 0x105ea4980>
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           │    │    │       └ {'timeout': 120, 'allow_redirects': True, 'proxies': OrderedDict(), 'stream': False, 'verify': True, 'cert': None}
+           │    │    └ <PreparedRequest [POST]>
+           │    └ <function Session.send at 0x105465640>
+           └ <requests.sessions.Session object at 0x105ea4ad0>
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        │       │    │          └ {'timeout': 120, 'proxies': OrderedDict(), 'stream': False, 'verify': True, 'cert': None}
+        │       │    └ <PreparedRequest [POST]>
+        │       └ <function HTTPAdapter.send at 0x1054649e0>
+        └ <requests.adapters.HTTPAdapter object at 0x105ea52b0>
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/requests/adapters.py", line 677, in send
+    raise ConnectionError(e, request=request)
+          │                          └ <PreparedRequest [POST]>
+          └ <class 'requests.exceptions.ConnectionError'>
+
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='oauth2.googleapis.com', port=443): Max retries exceeded with url: /token (Caused by NameResolutionError("HTTPSConnection(host='oauth2.googleapis.com', port=443): Failed to resolve 'oauth2.googleapis.com' ([Errno 8] nodename nor servname provided, or not known)"))
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/main.py", line 2, in <module>
+    from src.api.routes import calendar_router
+
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 762, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/src/api/routes/__init__.py", line 1, in <module>
+    from .calendar_routes import calendar_router
+
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 762, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/src/api/routes/calendar_routes.py", line 6, in <module>
+    calendar_handler = CalendarHandler()
+                       └ <class 'src.api.handlers.calendar_handler.CalendarHandler'>
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/src/api/handlers/calendar_handler.py", line 8, in __init__
+    self.calendar_service = CalendarService()
+    │                       └ <class 'src.services.calendar_service.CalendarService'>
+    └ <src.api.handlers.calendar_handler.CalendarHandler object at 0x105dc7cb0>
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/src/services/calendar_service.py", line 10, in __init__
+    self.google_calendar_client = GoogleCalendarClient()
+    │                             └ <class 'src.clients.google.calendar_client.GoogleCalendarClient'>
+    └ <src.services.calendar_service.CalendarService object at 0x105dc7e00>
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/src/clients/google/calendar_client.py", line 27, in __init__
+    authenticator = GoogleAuthenticator(
+                    └ <class 'src.clients.google.auth.GoogleAuthenticator'>
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/src/clients/google/auth.py", line 25, in __init__
+    self.credentials = self._authenticate()
+    │                  │    └ <function GoogleAuthenticator._authenticate at 0x105d92350>
+    │                  └ <src.clients.google.auth.GoogleAuthenticator object at 0x105ea41a0>
+    └ <src.clients.google.auth.GoogleAuthenticator object at 0x105ea41a0>
+
+> File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/src/clients/google/auth.py", line 50, in _authenticate
+    creds.refresh(Request())
+    │     │       └ <class 'google.auth.transport.requests.Request'>
+    │     └ <function Credentials.refresh at 0x1058bdbc0>
+    └ <google.oauth2.credentials.Credentials object at 0x105ea4590>
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/google/oauth2/credentials.py", line 409, in refresh
+    ) = reauth.refresh_grant(
+        │      └ <function refresh_grant at 0x1058bcb40>
+        └ <module 'google.oauth2.reauth' from '/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-pac...
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/google/oauth2/reauth.py", line 333, in refresh_grant
+    response_status_ok, response_data, retryable_error = _client._token_endpoint_request_no_throw(
+                                                         │       └ <function _token_endpoint_request_no_throw at 0x1058687d0>
+                                                         └ <module 'google.oauth2._client' from '/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-pa...
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/google/oauth2/_client.py", line 192, in _token_endpoint_request_no_throw
+    response = request(
+               └ <google.auth.transport.requests.Request object at 0x105ea4980>
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/google/auth/transport/requests.py", line 194, in __call__
+    raise new_exc from caught_exc
+          └ TransportError(ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'oauth2.googleapis.com\', port=443): Max retries exce...
+
+google.auth.exceptions.TransportError: HTTPSConnectionPool(host='oauth2.googleapis.com', port=443): Max retries exceeded with url: /token (Caused by NameResolutionError("HTTPSConnection(host='oauth2.googleapis.com', port=443): Failed to resolve 'oauth2.googleapis.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2025-12-15 00:43:22 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 00:43:22 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 00:43:22 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 00:43:22 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 00:43:22 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 00:43:22 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 00:43:22 | DEBUG    | src.clients.google.auth:_authenticate:49 - Refreshing expired credentials
+2025-12-15 00:43:22 | ERROR    | src.clients.google.auth:_authenticate:66 - Failed to authenticate with Google Calendar
+Traceback (most recent call last):
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/urllib3/connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+           │          └ <function create_connection at 0x10548dd20>
+           └ <module 'urllib3.util.connection' from '/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-...
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               │      │           │     │     │       │      └ <SocketKind.SOCK_STREAM: 1>
+               │      │           │     │     │       └ <module 'socket' from '/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/soc...
+               │      │           │     │     └ <AddressFamily.AF_UNSPEC: 0>
+               │      │           │     └ 443
+               │      │           └ 'oauth2.googleapis.com'
+               │      └ <function getaddrinfo at 0x102543ab0>
+               └ <module 'socket' from '/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/soc...
+
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/socket.py", line 983, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               │       │           │     │     │       │     │      └ 0
+               │       │           │     │     │       │     └ 0
+               │       │           │     │     │       └ <SocketKind.SOCK_STREAM: 1>
+               │       │           │     │     └ <AddressFamily.AF_UNSPEC: 0>
+               │       │           │     └ 443
+               │       │           └ 'oauth2.googleapis.com'
+               │       └ <built-in function getaddrinfo>
+               └ <module '_socket' from '/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/li...
+
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               │    └ <function HTTPConnectionPool._make_request at 0x1056578a0>
+               └ <urllib3.connectionpool.HTTPSConnectionPool object at 0x106631a90>
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+          └ NameResolutionError("HTTPSConnection(host='oauth2.googleapis.com', port=443): Failed to resolve 'oauth2.googleapis.com' ([Err...
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+    │    │              └ <HTTPSConnection(host='oauth2.googleapis.com', port=443) at 0x106631e80>
+    │    └ <function HTTPSConnectionPool._validate_conn at 0x105660300>
+    └ <urllib3.connectionpool.HTTPSConnectionPool object at 0x106631a90>
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/urllib3/connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+    │    └ <function HTTPSConnection.connect at 0x10564e8d0>
+    └ <HTTPSConnection(host='oauth2.googleapis.com', port=443) at 0x106631e80>
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/urllib3/connection.py", line 759, in connect
+    self.sock = sock = self._new_conn()
+    │    │             │    └ <function HTTPConnection._new_conn at 0x10564d2d0>
+    │    │             └ <HTTPSConnection(host='oauth2.googleapis.com', port=443) at 0x106631e80>
+    │    └ None
+    └ <HTTPSConnection(host='oauth2.googleapis.com', port=443) at 0x106631e80>
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/urllib3/connection.py", line 211, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+          │                   │    │     └ <HTTPSConnection(host='oauth2.googleapis.com', port=443) at 0x106631e80>
+          │                   │    └ <property object at 0x1056485e0>
+          │                   └ <HTTPSConnection(host='oauth2.googleapis.com', port=443) at 0x106631e80>
+          └ <class 'urllib3.exceptions.NameResolutionError'>
+
+urllib3.exceptions.NameResolutionError: HTTPSConnection(host='oauth2.googleapis.com', port=443): Failed to resolve 'oauth2.googleapis.com' ([Errno 8] nodename nor servname provided, or not known)
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/requests/adapters.py", line 644, in send
+    resp = conn.urlopen(
+           │    └ <function HTTPConnectionPool.urlopen at 0x105657cc0>
+           └ <urllib3.connectionpool.HTTPSConnectionPool object at 0x106631a90>
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              │       └ <function Retry.increment at 0x1054ad220>
+              └ Retry(total=0, connect=None, read=False, redirect=None, status=None)
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+          │             │      │    │            └ NameResolutionError("HTTPSConnection(host='oauth2.googleapis.com', port=443): Failed to resolve 'oauth2.googleapis.com' ([Err...
+          │             │      │    └ NameResolutionError("HTTPSConnection(host='oauth2.googleapis.com', port=443): Failed to resolve 'oauth2.googleapis.com' ([Err...
+          │             │      └ '/token'
+          │             └ <urllib3.connectionpool.HTTPSConnectionPool object at 0x106631a90>
+          └ <class 'urllib3.exceptions.MaxRetryError'>
+
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='oauth2.googleapis.com', port=443): Max retries exceeded with url: /token (Caused by NameResolutionError("HTTPSConnection(host='oauth2.googleapis.com', port=443): Failed to resolve 'oauth2.googleapis.com' ([Errno 8] nodename nor servname provided, or not known)"))
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/google/auth/transport/requests.py", line 187, in __call__
+    response = self.session.request(
+               │    │       └ <function Session.request at 0x1058b50c0>
+               │    └ <requests.sessions.Session object at 0x106630ad0>
+               └ <google.auth.transport.requests.Request object at 0x106630980>
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           │    │    │       └ {'timeout': 120, 'allow_redirects': True, 'proxies': OrderedDict(), 'stream': False, 'verify': True, 'cert': None}
+           │    │    └ <PreparedRequest [POST]>
+           │    └ <function Session.send at 0x1058b5640>
+           └ <requests.sessions.Session object at 0x106630ad0>
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        │       │    │          └ {'timeout': 120, 'proxies': OrderedDict(), 'stream': False, 'verify': True, 'cert': None}
+        │       │    └ <PreparedRequest [POST]>
+        │       └ <function HTTPAdapter.send at 0x1058b49e0>
+        └ <requests.adapters.HTTPAdapter object at 0x1066312b0>
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/requests/adapters.py", line 677, in send
+    raise ConnectionError(e, request=request)
+          │                          └ <PreparedRequest [POST]>
+          └ <class 'requests.exceptions.ConnectionError'>
+
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='oauth2.googleapis.com', port=443): Max retries exceeded with url: /token (Caused by NameResolutionError("HTTPSConnection(host='oauth2.googleapis.com', port=443): Failed to resolve 'oauth2.googleapis.com' ([Errno 8] nodename nor servname provided, or not known)"))
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/main.py", line 2, in <module>
+    from src.api.routes import calendar_router
+
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 762, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/src/api/routes/__init__.py", line 1, in <module>
+    from .calendar_routes import calendar_router
+
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 762, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/src/api/routes/calendar_routes.py", line 6, in <module>
+    calendar_handler = CalendarHandler()
+                       └ <class 'src.api.handlers.calendar_handler.CalendarHandler'>
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/src/api/handlers/calendar_handler.py", line 8, in __init__
+    self.calendar_service = CalendarService()
+    │                       └ <class 'src.services.calendar_service.CalendarService'>
+    └ <src.api.handlers.calendar_handler.CalendarHandler object at 0x106553cb0>
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/src/services/calendar_service.py", line 10, in __init__
+    self.google_calendar_client = GoogleCalendarClient()
+    │                             └ <class 'src.clients.google.calendar_client.GoogleCalendarClient'>
+    └ <src.services.calendar_service.CalendarService object at 0x106553e00>
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/src/clients/google/calendar_client.py", line 27, in __init__
+    authenticator = GoogleAuthenticator(
+                    └ <class 'src.clients.google.auth.GoogleAuthenticator'>
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/src/clients/google/auth.py", line 25, in __init__
+    self.credentials = self._authenticate()
+    │                  │    └ <function GoogleAuthenticator._authenticate at 0x10651e350>
+    │                  └ <src.clients.google.auth.GoogleAuthenticator object at 0x1066301a0>
+    └ <src.clients.google.auth.GoogleAuthenticator object at 0x1066301a0>
+
+> File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/src/clients/google/auth.py", line 50, in _authenticate
+    creds.refresh(Request())
+    │     │       └ <class 'google.auth.transport.requests.Request'>
+    │     └ <function Credentials.refresh at 0x105e49bc0>
+    └ <google.oauth2.credentials.Credentials object at 0x106630590>
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/google/oauth2/credentials.py", line 409, in refresh
+    ) = reauth.refresh_grant(
+        │      └ <function refresh_grant at 0x105e48b40>
+        └ <module 'google.oauth2.reauth' from '/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-pac...
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/google/oauth2/reauth.py", line 333, in refresh_grant
+    response_status_ok, response_data, retryable_error = _client._token_endpoint_request_no_throw(
+                                                         │       └ <function _token_endpoint_request_no_throw at 0x105df47d0>
+                                                         └ <module 'google.oauth2._client' from '/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-pa...
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/google/oauth2/_client.py", line 192, in _token_endpoint_request_no_throw
+    response = request(
+               └ <google.auth.transport.requests.Request object at 0x106630980>
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/google/auth/transport/requests.py", line 194, in __call__
+    raise new_exc from caught_exc
+          └ TransportError(ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'oauth2.googleapis.com\', port=443): Max retries exce...
+
+google.auth.exceptions.TransportError: HTTPSConnectionPool(host='oauth2.googleapis.com', port=443): Max retries exceeded with url: /token (Caused by NameResolutionError("HTTPSConnection(host='oauth2.googleapis.com', port=443): Failed to resolve 'oauth2.googleapis.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2025-12-15 00:43:33 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 00:43:33 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 00:43:33 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 00:43:33 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 00:43:33 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 00:43:33 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 00:43:33 | DEBUG    | src.clients.google.auth:_authenticate:49 - Refreshing expired credentials
+2025-12-15 00:43:33 | ERROR    | src.clients.google.auth:_authenticate:66 - Failed to authenticate with Google Calendar
+Traceback (most recent call last):
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/urllib3/connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+           │          └ <function create_connection at 0x10378dd20>
+           └ <module 'urllib3.util.connection' from '/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-...
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               │      │           │     │     │       │      └ <SocketKind.SOCK_STREAM: 1>
+               │      │           │     │     │       └ <module 'socket' from '/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/soc...
+               │      │           │     │     └ <AddressFamily.AF_UNSPEC: 0>
+               │      │           │     └ 443
+               │      │           └ 'oauth2.googleapis.com'
+               │      └ <function getaddrinfo at 0x10161bab0>
+               └ <module 'socket' from '/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/soc...
+
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/socket.py", line 983, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               │       │           │     │     │       │     │      └ 0
+               │       │           │     │     │       │     └ 0
+               │       │           │     │     │       └ <SocketKind.SOCK_STREAM: 1>
+               │       │           │     │     └ <AddressFamily.AF_UNSPEC: 0>
+               │       │           │     └ 443
+               │       │           └ 'oauth2.googleapis.com'
+               │       └ <built-in function getaddrinfo>
+               └ <module '_socket' from '/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/li...
+
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               │    └ <function HTTPConnectionPool._make_request at 0x1038578a0>
+               └ <urllib3.connectionpool.HTTPSConnectionPool object at 0x104931a90>
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+          └ NameResolutionError("HTTPSConnection(host='oauth2.googleapis.com', port=443): Failed to resolve 'oauth2.googleapis.com' ([Err...
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+    │    │              └ <HTTPSConnection(host='oauth2.googleapis.com', port=443) at 0x104931e80>
+    │    └ <function HTTPSConnectionPool._validate_conn at 0x103860300>
+    └ <urllib3.connectionpool.HTTPSConnectionPool object at 0x104931a90>
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/urllib3/connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+    │    └ <function HTTPSConnection.connect at 0x10384e8d0>
+    └ <HTTPSConnection(host='oauth2.googleapis.com', port=443) at 0x104931e80>
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/urllib3/connection.py", line 759, in connect
+    self.sock = sock = self._new_conn()
+    │    │             │    └ <function HTTPConnection._new_conn at 0x10384d2d0>
+    │    │             └ <HTTPSConnection(host='oauth2.googleapis.com', port=443) at 0x104931e80>
+    │    └ None
+    └ <HTTPSConnection(host='oauth2.googleapis.com', port=443) at 0x104931e80>
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/urllib3/connection.py", line 211, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+          │                   │    │     └ <HTTPSConnection(host='oauth2.googleapis.com', port=443) at 0x104931e80>
+          │                   │    └ <property object at 0x103848590>
+          │                   └ <HTTPSConnection(host='oauth2.googleapis.com', port=443) at 0x104931e80>
+          └ <class 'urllib3.exceptions.NameResolutionError'>
+
+urllib3.exceptions.NameResolutionError: HTTPSConnection(host='oauth2.googleapis.com', port=443): Failed to resolve 'oauth2.googleapis.com' ([Errno 8] nodename nor servname provided, or not known)
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/requests/adapters.py", line 644, in send
+    resp = conn.urlopen(
+           │    └ <function HTTPConnectionPool.urlopen at 0x103857cc0>
+           └ <urllib3.connectionpool.HTTPSConnectionPool object at 0x104931a90>
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              │       └ <function Retry.increment at 0x1037ad220>
+              └ Retry(total=0, connect=None, read=False, redirect=None, status=None)
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+          │             │      │    │            └ NameResolutionError("HTTPSConnection(host='oauth2.googleapis.com', port=443): Failed to resolve 'oauth2.googleapis.com' ([Err...
+          │             │      │    └ NameResolutionError("HTTPSConnection(host='oauth2.googleapis.com', port=443): Failed to resolve 'oauth2.googleapis.com' ([Err...
+          │             │      └ '/token'
+          │             └ <urllib3.connectionpool.HTTPSConnectionPool object at 0x104931a90>
+          └ <class 'urllib3.exceptions.MaxRetryError'>
+
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='oauth2.googleapis.com', port=443): Max retries exceeded with url: /token (Caused by NameResolutionError("HTTPSConnection(host='oauth2.googleapis.com', port=443): Failed to resolve 'oauth2.googleapis.com' ([Errno 8] nodename nor servname provided, or not known)"))
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/google/auth/transport/requests.py", line 187, in __call__
+    response = self.session.request(
+               │    │       └ <function Session.request at 0x103c790c0>
+               │    └ <requests.sessions.Session object at 0x104930ad0>
+               └ <google.auth.transport.requests.Request object at 0x104930980>
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           │    │    │       └ {'timeout': 120, 'allow_redirects': True, 'proxies': OrderedDict(), 'stream': False, 'verify': True, 'cert': None}
+           │    │    └ <PreparedRequest [POST]>
+           │    └ <function Session.send at 0x103c79640>
+           └ <requests.sessions.Session object at 0x104930ad0>
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        │       │    │          └ {'timeout': 120, 'proxies': OrderedDict(), 'stream': False, 'verify': True, 'cert': None}
+        │       │    └ <PreparedRequest [POST]>
+        │       └ <function HTTPAdapter.send at 0x103c789e0>
+        └ <requests.adapters.HTTPAdapter object at 0x1049312b0>
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/requests/adapters.py", line 677, in send
+    raise ConnectionError(e, request=request)
+          │                          └ <PreparedRequest [POST]>
+          └ <class 'requests.exceptions.ConnectionError'>
+
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='oauth2.googleapis.com', port=443): Max retries exceeded with url: /token (Caused by NameResolutionError("HTTPSConnection(host='oauth2.googleapis.com', port=443): Failed to resolve 'oauth2.googleapis.com' ([Errno 8] nodename nor servname provided, or not known)"))
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/main.py", line 2, in <module>
+    from src.api.routes import calendar_router
+
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 762, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/src/api/routes/__init__.py", line 1, in <module>
+    from .calendar_routes import calendar_router
+
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 762, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/src/api/routes/calendar_routes.py", line 6, in <module>
+    calendar_handler = CalendarHandler()
+                       └ <class 'src.api.handlers.calendar_handler.CalendarHandler'>
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/src/api/handlers/calendar_handler.py", line 8, in __init__
+    self.calendar_service = CalendarService()
+    │                       └ <class 'src.services.calendar_service.CalendarService'>
+    └ <src.api.handlers.calendar_handler.CalendarHandler object at 0x10474fcb0>
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/src/services/calendar_service.py", line 10, in __init__
+    self.google_calendar_client = GoogleCalendarClient()
+    │                             └ <class 'src.clients.google.calendar_client.GoogleCalendarClient'>
+    └ <src.services.calendar_service.CalendarService object at 0x10474fe00>
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/src/clients/google/calendar_client.py", line 27, in __init__
+    authenticator = GoogleAuthenticator(
+                    └ <class 'src.clients.google.auth.GoogleAuthenticator'>
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/src/clients/google/auth.py", line 25, in __init__
+    self.credentials = self._authenticate()
+    │                  │    └ <function GoogleAuthenticator._authenticate at 0x10471e350>
+    │                  └ <src.clients.google.auth.GoogleAuthenticator object at 0x1049301a0>
+    └ <src.clients.google.auth.GoogleAuthenticator object at 0x1049301a0>
+
+> File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/src/clients/google/auth.py", line 50, in _authenticate
+    creds.refresh(Request())
+    │     │       └ <class 'google.auth.transport.requests.Request'>
+    │     └ <function Credentials.refresh at 0x1040d1bc0>
+    └ <google.oauth2.credentials.Credentials object at 0x104930590>
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/google/oauth2/credentials.py", line 409, in refresh
+    ) = reauth.refresh_grant(
+        │      └ <function refresh_grant at 0x1040d0b40>
+        └ <module 'google.oauth2.reauth' from '/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-pac...
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/google/oauth2/reauth.py", line 333, in refresh_grant
+    response_status_ok, response_data, retryable_error = _client._token_endpoint_request_no_throw(
+                                                         │       └ <function _token_endpoint_request_no_throw at 0x10407c7d0>
+                                                         └ <module 'google.oauth2._client' from '/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-pa...
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/google/oauth2/_client.py", line 192, in _token_endpoint_request_no_throw
+    response = request(
+               └ <google.auth.transport.requests.Request object at 0x104930980>
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/google/auth/transport/requests.py", line 194, in __call__
+    raise new_exc from caught_exc
+          └ TransportError(ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'oauth2.googleapis.com\', port=443): Max retries exce...
+
+google.auth.exceptions.TransportError: HTTPSConnectionPool(host='oauth2.googleapis.com', port=443): Max retries exceeded with url: /token (Caused by NameResolutionError("HTTPSConnection(host='oauth2.googleapis.com', port=443): Failed to resolve 'oauth2.googleapis.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2025-12-15 00:43:35 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 00:43:35 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 00:43:35 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 00:43:35 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 00:43:35 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 00:43:35 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 00:43:35 | DEBUG    | src.clients.google.auth:_authenticate:49 - Refreshing expired credentials
+2025-12-15 00:43:36 | DEBUG    | src.clients.google.auth:_authenticate:60 - Credentials saved successfully
+2025-12-15 00:43:36 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 00:43:36 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 00:43:36 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 00:43:36 | INFO     | __main__:<module>:17 - Starting uvicorn server...
+2025-12-15 00:43:46 | DEBUG    | src.clients.google.calendar_client:get_upcoming_event:38 - Getting the upcoming 10 events
+2025-12-15 00:43:56 | DEBUG    | src.clients.google.calendar_client:get_upcoming_event:38 - Getting the upcoming 10 events
+2025-12-15 00:44:48 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 00:44:48 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 00:44:48 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 00:44:48 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 00:44:48 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 00:44:48 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 00:44:48 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 00:44:48 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 00:44:48 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 00:44:55 | DEBUG    | src.clients.google.calendar_client:get_upcoming_event:38 - Getting the upcoming 2 events
+2025-12-15 00:44:58 | DEBUG    | src.clients.google.calendar_client:get_upcoming_event:38 - Getting the upcoming 2 events
+2025-12-15 00:45:07 | DEBUG    | src.clients.google.calendar_client:get_upcoming_event:38 - Getting the upcoming 2 events
+2025-12-15 00:45:46 | DEBUG    | src.clients.google.calendar_client:get_upcoming_event:38 - Getting the upcoming 2 events
+2025-12-15 00:45:57 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 00:45:57 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 00:45:57 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 00:45:57 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 00:45:57 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 00:45:57 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 00:45:57 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 00:45:57 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 00:45:57 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 00:49:34 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 00:49:34 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 00:49:34 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 00:49:34 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 00:49:34 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 00:49:34 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 00:49:34 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 00:49:34 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 00:49:34 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 00:49:38 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 00:49:38 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 00:49:38 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 00:49:38 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 00:49:38 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 00:49:38 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 00:49:38 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 00:49:38 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 00:49:38 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 00:49:44 | DEBUG    | src.clients.google.calendar_client:get_upcoming_event:38 - Getting the upcoming 1 events
+2025-12-15 00:49:51 | DEBUG    | src.clients.google.calendar_client:get_upcoming_event:38 - Getting the upcoming 2 events
+2025-12-15 00:50:02 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 00:50:02 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 00:50:02 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 00:50:08 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 00:50:08 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 00:50:08 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 00:50:08 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 00:50:08 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 00:50:08 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 00:50:08 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 00:50:08 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 00:50:08 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 00:50:16 | DEBUG    | src.clients.google.calendar_client:get_upcoming_event:38 - Getting the upcoming 2 events
+2025-12-15 00:50:23 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 00:50:23 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 00:50:23 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 00:50:23 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 00:50:23 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 00:50:23 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 00:50:23 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 00:50:23 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 00:50:23 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 00:50:52 | DEBUG    | src.clients.google.calendar_client:get_upcoming_event:38 - Getting the upcoming 10 events
+2025-12-15 00:51:04 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 00:51:04 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 00:51:04 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 00:51:04 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 00:51:04 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 00:51:04 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 00:51:04 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 00:51:04 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 00:51:04 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 00:51:05 | DEBUG    | src.clients.google.calendar_client:get_upcoming_event:38 - Getting the upcoming 2 events
+2025-12-15 00:51:12 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 00:51:12 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 00:51:12 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 00:51:12 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 00:51:12 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 00:51:12 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 00:51:12 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 00:51:12 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 00:51:12 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 00:51:16 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 00:51:16 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 00:51:16 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 00:51:16 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 00:51:16 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 00:51:16 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 00:51:16 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 00:51:16 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 00:51:16 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 00:51:35 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 00:51:35 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 00:51:35 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 00:51:35 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 00:51:35 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 00:51:35 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 00:51:35 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 00:51:35 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 00:51:35 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 00:51:38 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 00:51:38 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 00:51:38 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 00:51:38 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 00:51:38 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 00:51:38 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 00:51:38 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 00:51:38 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 00:51:38 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 00:51:43 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 00:51:43 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 00:51:43 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 00:51:43 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 00:51:43 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 00:51:43 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 00:51:43 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 00:51:43 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 00:51:43 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 00:51:48 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 00:51:48 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 00:51:48 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 00:51:48 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 00:51:48 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 00:51:48 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 00:51:48 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 00:51:48 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 00:51:48 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 00:52:42 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 00:52:42 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 00:52:42 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 00:52:43 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 00:52:43 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 00:52:43 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 00:52:43 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 00:52:43 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 00:52:43 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 00:52:43 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 00:52:43 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 00:52:43 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 00:54:20 | DEBUG    | src.clients.google.calendar_client:create_event:58 - Starting create event
+2025-12-15 00:54:20 | DEBUG    | src.clients.google.mappers:domain_to_google_format:44 - Converted domain model to Google format: firt meeting
+2025-12-15 00:55:20 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 00:55:20 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 00:55:20 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 00:55:20 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 00:55:20 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 00:55:20 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 00:55:20 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 00:55:20 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 00:55:20 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 00:55:25 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 00:55:25 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 00:55:25 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 00:55:25 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 00:55:25 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 00:55:25 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 00:55:25 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 00:55:25 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 00:55:25 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 00:55:27 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 00:55:27 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 00:55:27 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 00:55:30 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 00:55:30 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 00:55:30 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 00:55:30 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 00:55:30 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 00:55:30 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 00:55:30 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 00:55:30 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 00:55:30 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 00:55:52 | DEBUG    | src.clients.google.calendar_client:create_event:58 - Starting create event
+2025-12-15 00:55:52 | DEBUG    | src.clients.google.mappers:domain_to_google_format:44 - Converted domain model to Google format: firt meeting
+2025-12-15 00:58:01 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 00:58:01 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 00:58:01 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 00:58:01 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 00:58:01 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 00:58:01 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 00:58:01 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 00:58:01 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 00:58:01 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 00:58:03 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 00:58:03 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 00:58:03 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 00:58:04 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 00:58:04 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 00:58:04 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 00:58:04 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 00:58:04 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 00:58:04 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 00:58:04 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 00:58:04 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 00:58:04 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 00:58:12 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 00:58:12 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 00:58:12 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 00:58:12 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 00:58:12 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 00:58:12 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 00:58:12 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 00:58:12 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 00:58:12 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 00:58:17 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 00:58:17 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 00:58:17 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 00:58:17 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 00:58:17 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 00:58:17 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 00:58:17 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 00:58:17 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 00:58:17 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:00:17 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:00:17 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:00:17 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:00:17 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 01:00:17 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 01:00:17 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:00:17 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:00:17 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:00:17 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:00:21 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:00:21 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:00:21 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:00:21 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 01:00:21 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 01:00:21 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:00:21 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:00:21 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:00:21 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:00:39 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:00:39 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:00:39 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:00:42 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:00:42 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:00:42 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:00:42 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 01:00:42 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 01:00:42 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:00:42 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:00:42 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:00:42 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:01:34 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:01:34 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:01:34 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:01:38 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:01:38 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:01:38 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:01:38 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 01:01:38 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 01:01:38 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:01:38 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:01:38 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:01:38 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:01:48 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:01:48 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:01:48 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:01:48 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 01:01:48 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 01:01:48 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:01:48 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:01:48 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:01:48 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:01:56 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:01:56 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:01:56 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:01:56 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 01:01:56 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 01:01:56 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:01:56 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:01:56 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:01:56 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:02:26 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:02:26 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:02:26 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:02:26 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 01:02:26 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 01:02:26 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:02:26 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:02:26 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:02:26 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:02:35 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:02:35 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:02:35 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:02:38 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:02:38 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:02:38 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:02:38 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 01:02:38 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 01:02:38 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:02:38 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:02:38 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:02:38 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:02:40 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:02:40 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:02:40 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:02:41 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:02:41 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:02:41 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:02:41 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 01:02:41 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 01:02:41 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:02:41 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:02:41 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:02:41 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:02:45 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:02:45 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:02:45 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:02:49 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:02:49 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:02:49 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:02:49 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 01:02:49 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 01:02:49 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:02:49 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:02:49 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:02:49 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:02:53 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:02:53 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:02:53 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:02:55 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:02:55 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:02:55 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:02:55 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:02:55 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:02:55 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:03:02 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:03:02 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:03:02 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:03:34 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:03:34 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:03:34 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:03:37 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:03:37 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:03:37 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:03:41 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:03:41 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:03:41 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:03:52 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:03:52 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:03:52 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:03:53 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:03:53 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:03:53 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:03:53 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 01:03:53 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 01:03:53 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:03:53 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:03:53 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:03:53 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:03:53 | DEBUG    | src.clients.google.calendar_client:create_event:58 - Starting create event
+2025-12-15 01:03:53 | DEBUG    | src.clients.google.mappers:domain_to_google_format:44 - Converted domain model to Google format: firt meeting
+2025-12-15 01:03:59 | DEBUG    | src.clients.google.calendar_client:create_event:58 - Starting create event
+2025-12-15 01:03:59 | DEBUG    | src.clients.google.mappers:domain_to_google_format:44 - Converted domain model to Google format: firt meeting
+2025-12-15 01:04:56 | DEBUG    | src.clients.google.calendar_client:create_event:58 - Starting create event
+2025-12-15 01:04:56 | DEBUG    | src.clients.google.mappers:domain_to_google_format:44 - Converted domain model to Google format: firt meeting
+2025-12-15 01:05:56 | DEBUG    | src.clients.google.calendar_client:create_event:58 - Starting create event
+2025-12-15 01:05:56 | DEBUG    | src.clients.google.mappers:domain_to_google_format:44 - Converted domain model to Google format: firt meeting
+2025-12-15 01:06:29 | DEBUG    | src.clients.google.calendar_client:create_event:58 - Starting create event
+2025-12-15 01:06:29 | DEBUG    | src.clients.google.mappers:domain_to_google_format:44 - Converted domain model to Google format: firt meeting
+2025-12-15 01:07:20 | DEBUG    | src.clients.google.calendar_client:create_event:58 - Starting create event
+2025-12-15 01:07:20 | DEBUG    | src.clients.google.mappers:domain_to_google_format:44 - Converted domain model to Google format: firt meeting
+2025-12-15 01:12:29 | DEBUG    | src.clients.google.calendar_client:create_event:58 - Starting create event
+2025-12-15 01:12:29 | DEBUG    | src.clients.google.mappers:domain_to_google_format:44 - Converted domain model to Google format: firt meeting
+2025-12-15 01:12:37 | DEBUG    | src.clients.google.calendar_client:create_event:58 - Starting create event
+2025-12-15 01:12:37 | DEBUG    | src.clients.google.mappers:domain_to_google_format:44 - Converted domain model to Google format: firt meeting
+2025-12-15 01:12:41 | DEBUG    | src.clients.google.calendar_client:create_event:58 - Starting create event
+2025-12-15 01:12:41 | DEBUG    | src.clients.google.mappers:domain_to_google_format:44 - Converted domain model to Google format: firt meeting
+2025-12-15 01:13:13 | DEBUG    | src.clients.google.calendar_client:create_event:58 - Starting create event
+2025-12-15 01:13:13 | DEBUG    | src.clients.google.mappers:domain_to_google_format:44 - Converted domain model to Google format: firt meeting

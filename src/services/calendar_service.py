@@ -10,7 +10,7 @@ class CalendarService:
         self.google_calendar_client = GoogleCalendarClient()
 
     def get_events(self, count: int):
-        return self.google_calendar_client.get_upcoming_event(count=count)
+        return self.google_calendar_client.get_events(count=count)
 
     def create_event(self, request: CalendarEvent):
         return self.google_calendar_client.create_event(request)

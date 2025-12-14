@@ -4,11 +4,12 @@ from datetime import datetime
 from typing import List
 from src.schemas import CalendarEvent
 from datetime import datetime, timezone, timedelta
+from zoneinfo import ZoneInfo
 
 
 class GetEventsRequest(BaseModel):
     count: int = Field(
-        default=10, ge=1, le=100, description="Maximum number of events to return"
+        default=5, ge=1, le=100, description="Maximum number of events to return"
     )
 
 
@@ -27,6 +28,10 @@ class CreateEventRequest(BaseModel):
     )
     location: str | None = Field(None, max_length=500, description="Event location")
     color_id: int = Field(default=9, ge=1, le=11, description="Calendar color (1-11)")
+    timezone: str = Field(
+        default="Asia/Kolkata",
+        description="IANA timezone (e.g., 'Asia/Kolkata', 'America/New_York')",
+    )
 
     @field_validator("date")
     @classmethod
@@ -55,24 +60,41 @@ class CreateEventRequest(BaseModel):
         except ValueError:
             raise ValueError("Time must be in HH:MM format (24-hour, e.g., 15:30)")
 
+    @field_validator("timezone")
+    @classmethod
+    def validate_timezone(cls, v):
+        """Validate timezone is a valid IANA timezone."""
+        import zoneinfo
+
+        try:
+            zoneinfo.ZoneInfo(v)
+            return v
+        except Exception:
+            raise ValueError(
+                f'Invalid timezone: {v}. Use IANA format like "Asia/Kolkata"'
+            )
+
     def convertCreateEventRequestToCalendarEvent(
         self, request: CreateEventRequest
     ) -> CalendarEvent:
-        # 1. Parse date and time from strings
         event_datetime_str = f"{request.date} {request.time}"
-        event_datetime = datetime.strptime(event_datetime_str, "%Y-%m-%d %H:%M")
-        event_datetime = event_datetime.replace(tzinfo=timezone.utc)
 
-        # 2. Calculate end time
+        # ✅ Parse as naive datetime first
+        naive_datetime = datetime.strptime(event_datetime_str, "%Y-%m-%d %H:%M")
+
+        # ✅ Apply the user's timezone (NOT UTC!)
+        user_timezone = ZoneInfo(request.timezone)
+        event_datetime = naive_datetime.replace(tzinfo=user_timezone)
+
+        # Calculate end time
         end_datetime = event_datetime + timedelta(minutes=request.duration_minutes)
 
-        # 3. Convert CreateEventRequest -> CalendarEvent (domain model)
-        calendar_event = CalendarEvent(
+        return CalendarEvent(
             title=request.title,
             description=request.description or f"Organized by {request.author}",
             start_time=event_datetime,
             end_time=end_datetime,
-            timezone="UTC",
+            timezone=request.timezone,
             color_id=request.color_id,
         )
         return calendar_event

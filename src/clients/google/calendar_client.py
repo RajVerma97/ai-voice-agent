@@ -31,11 +31,11 @@ class GoogleCalendarClient:
         self.service = build("calendar", "v3", credentials=self.credentials)
         self.mapper = GoogleCalendarMapper()
 
-    def get_upcoming_event(self, count: int = 10) -> list[Dict] | None:
+    def get_events(self, count: int) -> list[Dict] | None:
+        logger.debug(f"Getting the upcoming {count} events")
         try:
             # Call the Calendar API
             now = datetime.datetime.now(tz=datetime.timezone.utc).isoformat()
-            logger.debug(f"Getting the upcoming {count} events")
             events_result = (
                 self.service.events()
                 .list(
