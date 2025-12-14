@@ -1290,3 +1290,281 @@ google.auth.exceptions.TransportError: HTTPSConnectionPool(host='oauth2.googleap
 2025-12-15 01:12:41 | DEBUG    | src.clients.google.mappers:domain_to_google_format:44 - Converted domain model to Google format: firt meeting
 2025-12-15 01:13:13 | DEBUG    | src.clients.google.calendar_client:create_event:58 - Starting create event
 2025-12-15 01:13:13 | DEBUG    | src.clients.google.mappers:domain_to_google_format:44 - Converted domain model to Google format: firt meeting
+2025-12-15 01:33:56 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:33:56 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:33:56 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:33:56 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 01:33:56 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 01:33:56 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:33:56 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:33:56 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:33:56 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:34:00 | DEBUG    | src.clients.google.calendar_client:create_event:58 - Starting create event
+2025-12-15 01:34:00 | DEBUG    | src.clients.google.mappers:domain_to_google_format:44 - Converted domain model to Google format: firt meeting
+2025-12-15 01:35:21 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:35:21 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:35:21 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:35:21 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 01:35:21 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 01:35:21 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:35:21 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:35:21 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:35:21 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:35:23 | DEBUG    | src.clients.google.calendar_client:get_events:35 - Getting the upcoming 5 events
+2025-12-15 01:36:17 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:36:17 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:36:17 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:36:20 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:36:20 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:36:20 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:36:22 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:36:22 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:36:22 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:36:26 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:36:26 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:36:26 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:36:26 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 01:36:26 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 01:36:26 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:36:26 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:36:26 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:36:26 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:37:09 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:37:09 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:37:09 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:37:09 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 01:37:09 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 01:37:09 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:37:09 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:37:09 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:37:09 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:37:20 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:37:20 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:37:20 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:37:30 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:37:30 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:37:30 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:37:44 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:37:44 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:37:44 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:37:45 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:37:45 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:37:45 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:37:47 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:37:47 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:37:47 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:37:47 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 01:37:47 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 01:37:47 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:37:47 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:37:47 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:37:47 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:37:59 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:37:59 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:37:59 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:38:00 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:38:00 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:38:00 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:38:15 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:38:15 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:38:15 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:38:23 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:38:23 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:38:23 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:38:23 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 01:38:23 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 01:38:23 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:38:23 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:38:23 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:38:23 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:38:24 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:38:24 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:38:24 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:38:24 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 01:38:24 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 01:38:24 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:38:24 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:38:24 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:38:24 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:38:29 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:38:29 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:38:29 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:38:29 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 01:38:29 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 01:38:29 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:38:29 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:38:29 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:38:29 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:38:39 | DEBUG    | src.clients.google.calendar_client:get_events:35 - Getting the upcoming 5 events
+2025-12-15 01:38:55 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:38:55 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:38:55 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:38:55 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 01:38:55 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 01:38:55 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:38:55 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:38:55 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:38:55 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:38:58 | DEBUG    | src.clients.google.calendar_client:get_events:35 - Getting the upcoming 5 events
+2025-12-15 01:39:22 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:39:22 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:39:22 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:39:22 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 01:39:22 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 01:39:22 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:39:22 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:39:22 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:39:22 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:39:29 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:39:29 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:39:29 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:39:29 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 01:39:29 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 01:39:29 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:39:29 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:39:29 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:39:29 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:39:32 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:39:32 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:39:32 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:39:32 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 01:39:32 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 01:39:33 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:39:33 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:39:33 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:39:33 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:39:38 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:39:38 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:39:38 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:39:38 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 01:39:38 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 01:39:38 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:39:38 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:39:38 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:39:38 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:39:41 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:39:41 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:39:41 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:39:41 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 01:39:41 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 01:39:41 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:39:41 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:39:41 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:39:41 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:39:45 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:39:45 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:39:45 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:39:45 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 01:39:45 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 01:39:45 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:39:45 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:39:45 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:39:45 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:39:49 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:39:49 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:39:49 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:39:49 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 01:39:49 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 01:39:49 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:39:49 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:39:49 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:39:49 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:39:53 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:39:53 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:39:53 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:39:53 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 01:39:53 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 01:39:53 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:39:53 | DEBUG    | src.clients.google.auth:_authenticate:49 - Refreshing expired credentials
+2025-12-15 01:39:54 | DEBUG    | src.clients.google.auth:_authenticate:60 - Credentials saved successfully
+2025-12-15 01:39:54 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:39:54 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:39:54 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:39:57 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:39:57 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:39:57 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:40:06 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:40:06 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:40:06 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:40:17 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:40:17 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:40:17 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:40:20 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:40:20 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:40:20 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:40:27 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:40:27 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:40:27 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:40:27 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 01:40:27 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 01:40:27 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:40:27 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:40:27 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:40:27 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:40:29 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:40:29 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:40:29 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:40:29 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 01:40:29 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 01:40:29 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:40:29 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:40:29 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:40:29 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:40:32 | DEBUG    | src.clients.google.calendar_client:get_events:35 - Getting the upcoming 5 events
+2025-12-15 01:40:35 | DEBUG    | src.clients.google.calendar_client:get_events:35 - Getting the upcoming 5 events
+2025-12-15 01:40:37 | DEBUG    | src.clients.google.calendar_client:get_events:35 - Getting the upcoming 5 events
+2025-12-15 01:40:39 | DEBUG    | src.clients.google.calendar_client:get_events:35 - Getting the upcoming 5 events
+2025-12-15 01:40:40 | DEBUG    | src.clients.google.calendar_client:get_events:35 - Getting the upcoming 5 events
+2025-12-15 01:41:21 | DEBUG    | src.clients.google.calendar_client:get_events:35 - Getting the upcoming 5 events
+2025-12-15 01:42:40 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:42:40 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:42:40 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:42:40 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 01:42:40 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 01:42:40 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:42:40 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:42:40 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:42:40 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:42:40 | DEBUG    | src.clients.google.calendar_client:get_events:35 - Getting the upcoming 5 events
+2025-12-15 01:42:42 | DEBUG    | src.clients.google.calendar_client:get_events:35 - Getting the upcoming 5 events
+2025-12-15 01:43:15 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:43:15 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:43:15 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:43:15 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 01:43:15 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 01:43:15 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:43:15 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:43:15 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:43:15 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:43:18 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:43:18 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:43:18 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:43:18 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 01:43:18 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 01:43:18 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:43:18 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:43:18 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:43:18 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:43:22 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:43:22 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:43:22 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:43:22 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 01:43:22 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 01:43:22 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:43:22 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:43:22 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:43:22 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:43:36 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 01:43:36 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 01:43:36 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 01:43:36 | DEBUG    | src.services.calendar_service:__init__:9 - Calendar Service
+2025-12-15 01:43:36 | DEBUG    | src.clients.google.calendar_client:__init__:24 - Google Calendar Client
+2025-12-15 01:43:36 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:43:36 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:43:36 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 01:43:36 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 01:43:37 | DEBUG    | src.clients.google.calendar_client:get_events:35 - Getting the upcoming 5 events
+2025-12-15 01:44:28 | DEBUG    | src.clients.google.calendar_client:create_event:58 - Starting create event
+2025-12-15 01:44:28 | DEBUG    | src.clients.google.mappers:domain_to_google_format:44 - Converted domain model to Google format: firt meeting
+2025-12-15 01:44:42 | DEBUG    | src.clients.google.calendar_client:create_event:58 - Starting create event
+2025-12-15 01:44:42 | DEBUG    | src.clients.google.mappers:domain_to_google_format:44 - Converted domain model to Google format: firt meeting
