@@ -9,7 +9,6 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 from src.utils.logger import logger
-from config import event_config
 from src.schemas import CalendarEvent
 from .auth import GoogleAuthenticator
 from .mappers import GoogleCalendarMapper

@@ -9,7 +9,6 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 from src.utils.logger import logger
-from config import event_config
 
 
 class GoogleAuthenticator:
@@ -23,6 +22,7 @@ class GoogleAuthenticator:
         self.credentials_file = Path(credentials_file)
         self.token_file = Path(token_file)
         self.credentials = self._authenticate()
+
     def _authenticate(self):
         """
         Authenticate with Google Calendar API.
