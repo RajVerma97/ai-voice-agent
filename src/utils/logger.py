@@ -81,4 +81,3 @@ logger.info(f"Logger initialized for environment: {ENV}")
 logger.debug(f"Console log level: {console_level}")
 logger.debug(f"Logs directory: {logs_dir}")
 
-__all__ = ["logger"]
