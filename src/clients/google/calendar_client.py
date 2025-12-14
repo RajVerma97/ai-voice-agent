@@ -21,7 +21,6 @@ class GoogleCalendarClient:
         credentials_file: str = "credentials.json",
         token_file: str = "token.json",
     ):
-        logger.debug("Google Calendar Client")
         self.credentials_file = Path(credentials_file)
         self.token_file = Path(token_file)
         authenticator = GoogleAuthenticator(

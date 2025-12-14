@@ -43,30 +43,3 @@ class GoogleCalendarMapper:
 
         logger.debug(f"Converted domain model to Google format: {event.title}")
         return google_event
-
-    @staticmethod
-    def google_to_dict(google_event: Dict) -> Dict:
-        """
-        Convert Google Calendar API response to clean dictionary.
-
-        Args:
-            google_event: Raw event from Google Calendar API
-
-        Returns:
-            Cleaned event dictionary
-        """
-        return {
-            "id": google_event.get("id"),
-            "title": google_event.get("summary", "No Title"),
-            "description": google_event.get("description"),
-            "location": google_event.get("location"),
-            "status": google_event.get("status", "confirmed"),
-            "html_link": google_event.get("htmlLink"),
-            "start": google_event.get("start"),
-            "end": google_event.get("end"),
-            "created": google_event.get("created"),
-            "updated": google_event.get("updated"),
-            "organizer": google_event.get("organizer", {}),
-            "attendees": google_event.get("attendees", []),
-            "color_id": google_event.get("colorId"),
-        }

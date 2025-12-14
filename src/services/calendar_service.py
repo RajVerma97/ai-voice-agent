@@ -6,7 +6,6 @@ from src.api.requests import CreateEventRequest
 
 class CalendarService:
     def __init__(self):
-        logger.debug("Calendar Service")
         self.google_calendar_client = GoogleCalendarClient()
 
     def get_events(self, count: int):
