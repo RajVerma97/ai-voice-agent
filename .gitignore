@@ -1,6 +1,5 @@
 # Secrets
-credentials.json
-token.json
+config/
 *.pem
 *.key
 
