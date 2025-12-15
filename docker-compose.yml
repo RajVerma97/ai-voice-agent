@@ -1,5 +1,6 @@
 services:
   app:
+    image: ai-voice-agent:latest
     build:
       dockerfile: ./dockerfile
       context: .

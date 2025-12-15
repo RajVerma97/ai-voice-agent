@@ -8030,3 +8030,159 @@ Traceback (most recent call last):
           └ <module 'google.auth.exceptions' from '/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-p...
 
 google.auth.exceptions.MalformedError: Service account info was not in the expected format, missing fields token_uri, client_email.
+2025-12-16 01:02:28 | ERROR    | src.clients.google.auth:_authenticate_service_account:78 - Failed to authenticate with service account
+{}
+Traceback (most recent call last):
+
+  File "<string>", line 1, in <module>
+
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               │     │   └ 4
+               │     └ 7
+               └ <function _main at 0x1045facf0>
+
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/multiprocessing/spawn.py", line 135, in _main
+    return self._bootstrap(parent_sentinel)
+           │    │          └ 4
+           │    └ <function BaseProcess._bootstrap at 0x1044238a0>
+           └ <SpawnProcess name='SpawnProcess-1' parent=21144 started>
+
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/multiprocessing/process.py", line 320, in _bootstrap
+    self.run()
+    │    └ <function BaseProcess.run at 0x104421f30>
+    └ <SpawnProcess name='SpawnProcess-1' parent=21144 started>
+
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {'config': <uvicorn.config.Config object at 0x104595400>, 'target': <bound method Server.run of <uvicorn.server.Server object...
+    │    │        │    │        └ <SpawnProcess name='SpawnProcess-1' parent=21144 started>
+    │    │        │    └ ()
+    │    │        └ <SpawnProcess name='SpawnProcess-1' parent=21144 started>
+    │    └ <function subprocess_started at 0x105b74670>
+    └ <SpawnProcess name='SpawnProcess-1' parent=21144 started>
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/uvicorn/_subprocess.py", line 80, in subprocess_started
+    target(sockets=sockets)
+    │              └ [<socket.socket fd=3, family=2, type=1, proto=0, laddr=('0.0.0.0', 8000)>]
+    └ <bound method Server.run of <uvicorn.server.Server object at 0x105c7d010>>
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/uvicorn/server.py", line 67, in run
+    return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
+           │           │    │             │                      │    │      └ <function Config.get_loop_factory at 0x1053f7d70>
+           │           │    │             │                      │    └ <uvicorn.config.Config object at 0x104595400>
+           │           │    │             │                      └ <uvicorn.server.Server object at 0x105c7d010>
+           │           │    │             └ [<socket.socket fd=3, family=2, type=1, proto=0, laddr=('0.0.0.0', 8000)>]
+           │           │    └ <function Server.serve at 0x10544f320>
+           │           └ <uvicorn.server.Server object at 0x105c7d010>
+           └ <function run at 0x1051219b0>
+
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/runners.py", line 204, in run
+    return runner.run(main)
+           │      │   └ <coroutine object Server.serve at 0x105ca2f20>
+           │      └ <function Runner.run at 0x105121dd0>
+           └ <asyncio.runners.Runner object at 0x1042ba510>
+
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/runners.py", line 127, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<Server.serve() running at /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/...
+           │    │     └ <cyfunction Loop.run_until_complete at 0x105cd1900>
+           │    └ <uvloop.Loop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x1042ba510>
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/uvicorn/server.py", line 71, in serve
+    await self._serve(sockets)
+          │    │      └ [<socket.socket fd=3, family=2, type=1, proto=0, laddr=('0.0.0.0', 8000)>]
+          │    └ <function Server._serve at 0x10544f480>
+          └ <uvicorn.server.Server object at 0x105c7d010>
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/uvicorn/server.py", line 78, in _serve
+    config.load()
+    │      └ <function Config.load at 0x1053f7ab0>
+    └ <uvicorn.config.Config object at 0x104595400>
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/uvicorn/config.py", line 439, in load
+    self.loaded_app = import_from_string(self.app)
+    │                 │                  │    └ 'src.main:app'
+    │                 │                  └ <uvicorn.config.Config object at 0x104595400>
+    │                 └ <function import_from_string at 0x105373690>
+    └ <uvicorn.config.Config object at 0x104595400>
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+             │         │             └ 'src.main'
+             │         └ <function import_module at 0x104519900>
+             └ <module 'importlib' from '/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/...
+
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'src.main'
+           │          └ <function _gcd_import at 0x1041bbe20>
+           └ <module '_frozen_importlib' (frozen)>
+
+  File "<frozen importlib._bootstrap>", line 1398, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 762, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/src/main.py", line 2, in <module>
+    from src.api.routes import calendar_router
+
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 762, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/src/api/routes/__init__.py", line 1, in <module>
+    from .calendar_routes import calendar_router
+
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 762, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/src/api/routes/calendar_routes.py", line 7, in <module>
+    calendar_handler = CalendarHandler()
+                       └ <class 'src.api.handlers.calendar_handler.CalendarHandler'>
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/src/api/handlers/calendar_handler.py", line 8, in __init__
+    self.calendar_service = CalendarService()
+    │                       └ <class 'src.services.calendar_service.CalendarService'>
+    └ <src.api.handlers.calendar_handler.CalendarHandler object at 0x107bad2b0>
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/src/services/calendar_service.py", line 9, in __init__
+    self.google_calendar_client = GoogleCalendarClient()
+    │                             └ <class 'src.clients.google.calendar_client.GoogleCalendarClient'>
+    └ <src.services.calendar_service.CalendarService object at 0x107bad400>
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/src/clients/google/calendar_client.py", line 35, in __init__
+    self.credentials = authenticator._authenticate()
+    │                  │             └ <function GoogleAuthenticator._authenticate at 0x107bbecf0>
+    │                  └ <src.clients.google.auth.GoogleAuthenticator object at 0x107bad6a0>
+    └ <src.clients.google.calendar_client.GoogleCalendarClient object at 0x107bad550>
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/src/clients/google/auth.py", line 60, in _authenticate
+    return self._authenticate_service_account()
+           │    └ <function GoogleAuthenticator._authenticate_service_account at 0x107bbec40>
+           └ <src.clients.google.auth.GoogleAuthenticator object at 0x107bad6a0>
+
+> File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/src/clients/google/auth.py", line 72, in _authenticate_service_account
+    credentials = service_account.Credentials.from_service_account_file(
+                  │               │           └ <classmethod(<function Credentials.from_service_account_file at 0x10742fcc0>)>
+                  │               └ <class 'google.oauth2.service_account.Credentials'>
+                  └ <module 'google.oauth2.service_account' from '/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14...
+
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/google/oauth2/service_account.py", line 264, in from_service_account_file
+    info, signer = _service_account_info.from_filename(
+                   │                     └ <function from_filename at 0x1071317a0>
+                   └ <module 'google.auth._service_account_info' from '/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python...
+  File "/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/env/lib/python3.14/site-packages/google/auth/_service_account_info.py", line 78, in from_filename
+    with io.open(filename, "r", encoding="utf-8") as json_file:
+         │  │    └ '/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/service-account.json'
+         │  └ <built-in function open>
+         └ <module 'io' (frozen)>
+
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/service-account.json'
