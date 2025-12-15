@@ -4,7 +4,7 @@ from typing import Optional, List
 
 class EventPerson(BaseModel):
     email: str
-    self: bool
+    self: Optional[bool] = None
 
 
 class EventDateTime(BaseModel):

@@ -21,17 +21,16 @@ class GoogleCalendarClient:
         credentials_file: str | None = None,
         token_file: str | None = None,
     ):
-        # Use Config defaults if not provided
         self.credentials_file = (
             Path(credentials_file) if credentials_file else Config.CREDENTIALS_FILE
         )
         self.token_file = Path(token_file) if token_file else Config.TOKEN_FILE
 
-        # Ensure config directory exists
         Config.ensure_config_dir()
-
         authenticator = GoogleAuthenticator(
-            credentials_file=credentials_file, token_file=token_file
+            credentials_file=credentials_file,
+            token_file=token_file,
+            use_service_account=Config.USE_SERVICE_ACCOUNT,
         )
         self.credentials = authenticator._authenticate()
         self.service = build("calendar", "v3", credentials=self.credentials)
@@ -45,7 +44,7 @@ class GoogleCalendarClient:
             events_result = (
                 self.service.events()
                 .list(
-                    calendarId="primary",
+                    calendarId=Config.CALENDAR_ID,
                     timeMin=now,
                     maxResults=count,
                     singleEvents=True,
@@ -66,7 +65,7 @@ class GoogleCalendarClient:
             calendar_event = self.mapper.domain_to_google_format(event)
             created_event = (
                 self.service.events()
-                .insert(calendarId="primary", body=calendar_event)
+                .insert(calendarId=Config.CALENDAR_ID, body=calendar_event)
                 .execute()
             )
             return created_event
