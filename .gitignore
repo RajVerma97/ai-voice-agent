@@ -1,5 +1,7 @@
 # Secrets
-config/
+token.json
+credentials.json
+service-account.json
 *.pem
 *.key
 
