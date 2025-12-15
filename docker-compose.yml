@@ -1,0 +1,17 @@
+services:
+  app:
+    build:
+      dockerfile: ./dockerfile
+      context: .
+    container_name: app
+    ports:
+      - "8000:8000"
+    networks:
+      - ai-voice-agent-network
+    volumes:
+      - ./token.json:/app/token.json:ro  # Read-only mount
+      - ./credentials.json:/app/credentials.json:ro
+
+networks:
+  ai-voice-agent-network:
+    driver: bridge

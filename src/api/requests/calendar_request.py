@@ -75,7 +75,7 @@ class CreateEventRequest(BaseModel):
             )
 
     def convertCreateEventRequestToCalendarEvent(
-        self, request: CreateEventRequest
+        self, request: "CreateEventRequest"
     ) -> CalendarEvent:
         event_datetime_str = f"{request.date} {request.time}"
 

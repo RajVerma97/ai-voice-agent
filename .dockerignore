@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+venv/
+
+# Git
+.git/
+.gitignore
+
+# Docker
+dockerfile
+docker-compose.yml
+.dockerignore
+
+# Credentials (mounted as volumes)
+token.json
+credentials.json
+
+# Logs (mounted as volume)
+logs/
+
+# Environment
+.env
+.env.*
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
+
+# Documentation
+*.md
+
+# Tests
+tests/

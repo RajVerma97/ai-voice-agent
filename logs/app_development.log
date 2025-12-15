@@ -1616,3 +1616,20 @@ google.auth.exceptions.TransportError: HTTPSConnectionPool(host='oauth2.googleap
 2025-12-15 02:11:14 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
 2025-12-15 02:11:14 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
 2025-12-15 02:11:14 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 14:39:39 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 14:39:39 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 14:39:39 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 14:39:39 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 14:39:39 | DEBUG    | src.clients.google.auth:_authenticate:49 - Refreshing expired credentials
+2025-12-15 14:39:39 | DEBUG    | src.clients.google.auth:_authenticate:60 - Credentials saved successfully
+2025-12-15 14:39:39 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 14:39:39 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 14:39:39 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 14:48:36 | INFO     | src.utils.logger:<module>:80 - Logger initialized for environment: development
+2025-12-15 14:48:36 | DEBUG    | src.utils.logger:<module>:81 - Console log level: DEBUG
+2025-12-15 14:48:36 | DEBUG    | src.utils.logger:<module>:82 - Logs directory: /Users/rajneeshverma/Desktop/dev/python/ai-ml/ai-voice-agent/logs
+2025-12-15 14:48:36 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 14:48:36 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 14:48:36 | DEBUG    | src.clients.google.auth:_authenticate:36 - Starting Google Calendar authentication
+2025-12-15 14:48:36 | INFO     | src.clients.google.auth:_authenticate:62 - Successfully authenticated with Google Calendar
+2025-12-15 14:49:09 | DEBUG    | src.clients.google.calendar_client:get_events:33 - Getting the upcoming 5 events
