@@ -6,11 +6,27 @@ services:
     container_name: app
     ports:
       - "8000:8000"
+    environment:
+      - ENVIRONMENT=${ENVIRONMENT:-development}
+      - LOG_LEVEL=${LOG_LEVEL:-info}
     networks:
       - ai-voice-agent-network
     volumes:
-      - ./token.json:/app/token.json:ro  # Read-only mount
-      - ./credentials.json:/app/credentials.json:ro
+      - ./config/:/app/config
+      - ./logs:/app/logs
+    restart: unless-stopped
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')",
+        ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
 
 networks:
   ai-voice-agent-network:

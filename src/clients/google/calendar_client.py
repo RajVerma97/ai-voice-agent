@@ -12,16 +12,24 @@ from src.utils.logger import logger
 from src.schemas import CalendarEvent
 from .auth import GoogleAuthenticator
 from .mappers import GoogleCalendarMapper
+from src.config import Config
 
 
 class GoogleCalendarClient:
     def __init__(
         self,
-        credentials_file: str = "credentials.json",
-        token_file: str = "token.json",
+        credentials_file: str | None = None,
+        token_file: str | None = None,
     ):
-        self.credentials_file = Path(credentials_file)
-        self.token_file = Path(token_file)
+        # Use Config defaults if not provided
+        self.credentials_file = (
+            Path(credentials_file) if credentials_file else Config.CREDENTIALS_FILE
+        )
+        self.token_file = Path(token_file) if token_file else Config.TOKEN_FILE
+
+        # Ensure config directory exists
+        Config.ensure_config_dir()
+
         authenticator = GoogleAuthenticator(
             credentials_file=credentials_file, token_file=token_file
         )

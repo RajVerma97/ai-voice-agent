@@ -9,6 +9,7 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 from src.utils.logger import logger
+from src.config import Config
 
 
 class GoogleAuthenticator:
@@ -16,11 +17,18 @@ class GoogleAuthenticator:
 
     def __init__(
         self,
-        credentials_file: str = "credentials.json",
-        token_file: str = "token.json",
+        credentials_file: str | None = None,
+        token_file: str | None = None,
     ):
-        self.credentials_file = Path(credentials_file)
-        self.token_file = Path(token_file)
+        # Use Config defaults if not provided
+        self.credentials_file = (
+            Path(credentials_file) if credentials_file else Config.CREDENTIALS_FILE
+        )
+        self.token_file = Path(token_file) if token_file else Config.TOKEN_FILE
+
+        # Ensure config directory exists
+        Config.ensure_config_dir()
+
         self.credentials = self._authenticate()
 
     def _authenticate(self):
@@ -53,7 +61,7 @@ class GoogleAuthenticator:
                     flow = InstalledAppFlow.from_client_secrets_file(
                         str(self.credentials_file), self.SCOPES
                     )
-                    creds = flow.run_local_server(port=0)
+                    creds = flow.run_local_server(port=Config.OAUTH_REDIRECT_PORT)
 
                 # Save credentials for future use
                 self.token_file.write_text(creds.to_json())
