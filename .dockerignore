@@ -15,9 +15,6 @@ dockerfile
 docker-compose.yml
 .dockerignore
 
-# Credentials (mounted as volumes)
-token.json
-credentials.json
 
 # Logs (mounted as volume)
 logs/

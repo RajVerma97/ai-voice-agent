@@ -10,13 +10,14 @@ services:
     environment:
       - ENVIRONMENT=${ENVIRONMENT:-development}
       - LOG_LEVEL=${LOG_LEVEL:-DEBUG}
-      - USE_SERVICE_ACCOUNT=${USE_SERVICE_ACCOUNT:-false}
+      - USE_SERVICE_ACCOUNT=${USE_SERVICE_ACCOUNT:-true}
       - CALENDAR_ID=${CALENDAR_ID:-primary}
       - OAUTH_REDIRECT_PORT=${OAUTH_REDIRECT_PORT:-8080}
     networks:
       - ai-voice-agent-network
     volumes:
-      - ./config/:/app/config
+      - ./credentials.json:/app/credentials.json
+      - ./service-account.json:/app/service-account.json
       - ./logs:/app/logs
     restart: unless-stopped
     healthcheck:
