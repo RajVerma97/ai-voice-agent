@@ -6,7 +6,6 @@ class Config:
     # Base directory is project root
     BASE_DIR = Path(__file__).resolve().parent.parent
 
-    # Use service account in production (Docker)
     USE_SERVICE_ACCOUNT = os.getenv("USE_SERVICE_ACCOUNT", "false").lower() == "true"
 
     # Credential file paths

@@ -39,7 +39,6 @@ class GoogleCalendarClient:
     def get_events(self, count: int) -> list[Dict] | None:
         logger.debug(f"Getting the upcoming {count} events")
         try:
-            # Call the Calendar API
             now = datetime.datetime.now(tz=datetime.timezone.utc).isoformat()
             events_result = (
                 self.service.events()

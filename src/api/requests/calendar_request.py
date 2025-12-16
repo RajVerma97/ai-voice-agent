@@ -79,10 +79,10 @@ class CreateEventRequest(BaseModel):
     ) -> CalendarEvent:
         event_datetime_str = f"{request.date} {request.time}"
 
-        # ✅ Parse as naive datetime first
+        # Parse as naive datetime first
         naive_datetime = datetime.strptime(event_datetime_str, "%Y-%m-%d %H:%M")
 
-        # ✅ Apply the user's timezone (NOT UTC!)
+        # Apply the user's timezone (NOT UTC!)
         user_timezone = ZoneInfo(request.timezone)
         event_datetime = naive_datetime.replace(tzinfo=user_timezone)
 
