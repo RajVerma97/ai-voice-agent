@@ -7,7 +7,7 @@ The system uses **ElevenLabs** for the voice agent and a **FastAPI backend** for
 
 ---
 
-## 📌 Assignment Overview
+## 📌 Overview
 
 **Voice Scheduling Agent (Deployed)**
 
@@ -291,4 +291,4 @@ You can now test the voice agent and calendar APIs locally.
 ## 👤 Author
 
 **Rajneesh Verma**
-AI Voice Scheduling Agent – Assignment Submission
+AI Voice Scheduling Agent
