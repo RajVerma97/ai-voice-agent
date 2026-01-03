@@ -1,8 +1,8 @@
-# VIKARA – AI Voice Scheduling Agent 🎙️📅
+# AI Voice Scheduling Agent 🎙️📅
 - Loom video demo
 👉 [https://www.loom.com/share/2814377840e34d54a526bae36cdec546](https://www.loom.com/share/2814377840e34d54a526bae36cdec546)
 
-VIKARA is a real-time AI voice assistant that schedules meetings by conversing with users and creating **actual Google Calendar events**.
+It is a real-time AI voice assistant that schedules meetings by conversing with users and creating **actual Google Calendar events**.
 The system uses **ElevenLabs** for the voice agent and a **FastAPI backend** for calendar operations, supporting both **OAuth 2.0** and **Service Account** authentication.
 
 ---
